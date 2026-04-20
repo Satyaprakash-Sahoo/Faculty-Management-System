@@ -1,0 +1,5 @@
+
+{
+  "name": "Faculty Information Module",
+  "description": "A simple CRUD application for managing teacher profiles. Features include viewing, adding, editing, and deleting faculty members, along with search and filter functionality."
+}
