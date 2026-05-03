@@ -62,6 +62,17 @@ export const Login = () => {
       `}</style>
 
       <div className="max-w-md w-full space-y-8 relative z-10">
+        {/* Back button */}
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300 mb-4"
+        >
+          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Home
+        </Link>
+
         <div className="bg-white rounded-2xl shadow-2xl p-8 backdrop-blur-lg border border-white/20">
           <div className="text-center mb-8">
             <div className="mx-auto h-16 w-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mb-4 transform hover:scale-110 transition-transform duration-300 shadow-lg">
