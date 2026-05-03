@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect, useCallback } from 'react';
+import { createContext, useCallback, useContext, useEffect, useState } from 'react';
 
 const FacultyContext = createContext(undefined);
 
@@ -7,7 +7,7 @@ export const FacultyProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const API_URL = 'http://localhost:5002/api/faculty';
+    const API_URL = 'https://faculty-management-system-3.onrender.com/api/faculty';
 
     // Helper function to get auth headers
     const getAuthHeaders = () => {

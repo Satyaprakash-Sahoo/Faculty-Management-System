@@ -1,8 +1,8 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 const AuthContext = createContext(undefined);
 
-const API_URL = 'http://localhost:5002/api/auth';
+const API_URL = 'https://faculty-management-system-3.onrender.com/api/auth';
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
