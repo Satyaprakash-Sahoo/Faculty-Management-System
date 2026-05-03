@@ -1,10 +1,10 @@
+import cors from 'cors';
 import 'dotenv/config';
 import express from 'express';
-import cors from 'cors';
 import mongoose from 'mongoose';
+import Faculty from './models/Faculty.js';
 import authRoutes from './routes/auth.js';
 import facultyRoutes from './routes/faculty.js';
-import Faculty from './models/Faculty.js';
 
 const app = express();
 const PORT = process.env.PORT || 5002;
@@ -18,6 +18,11 @@ if (!MONGO_URI) {
 
 app.use(cors());
 app.use(express.json());
+
+app.use(express.static("../frontend/dist"));
+app.get("/*", (req, res) =>
+  res.sendFile("index.html", { root: "../frontend/dist/" }),
+);
 
 // --- API Routes ---
 app.use('/api/auth', authRoutes);
